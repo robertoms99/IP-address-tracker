@@ -1,0 +1,73 @@
+/*||GLOBALS RESETS||*/
+
+/*1-remove tap highlighting in webkit UA*/
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+	-webkit-tap-highlight-color: transparent !important; //1
+}
+
+//1-base for rem factor
+html {
+	font-size: 62.5%; //1
+}
+
+:root {
+	--color-light-grey: hsl(230, 100%, 99%);
+	--color-grey: hsl(224, 65%, 95%);
+	--color-dark-grey: hsl(223, 50%, 87%);
+	--color-black: hsl(225, 20%, 60%);
+	--color-primary: hsl(227, 35%, 25%);
+	--color-accent: hsl(174, 77%, 80%);
+	--color-dark-accent: hsl(174, 86%, 45%);
+	--color-light-danger: hsl(14, 92%, 95%);
+	--color-danger: hsl(15, 100%, 70%);
+}
+
+html,
+body {
+	min-height: 100vh;
+}
+
+//1-alternative box model
+//2- create a BFC
+body {
+	box-sizing: border-box; //1
+	color: var(--color-black);
+	display: flow-root; //2
+	font-family: 'Manrope', sans-serif;
+	font-size: 1.5rem;
+}
+
+//1- line-heights for all paragraphs
+p {
+	line-height: 1.5; //1
+}
+
+//1- remove marker for unordered/ordered lists items
+ul {
+	list-style-type: none//1;
+}
+
+// 1- remove user agent text-decoration and color
+a {
+	color: inherit//1;
+}
+
+//1- avoid user resizing
+textarea {
+	resize: none; //1
+}
+
+// 1- remove all button's dirty styles
+button {
+	outline: none; //1
+	border: none; //1
+	background: none; //1
+	color: inherit; //1
+	font-family: inherit; //1
+	font-size: 100%; //1
+}
