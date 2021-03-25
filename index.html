@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0"> <!-- displays site properly based on user's device -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
     integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
   <link rel="stylesheet" href="./styles/index.min.css" />
@@ -14,16 +16,49 @@
 
 <body>
   <div class="container">
-    IP Address Tracker
-
-    Search for any IP address or domain
-
-    IP Address
-    Location
-    Timezone
-    UTC
-    <!-- add offset value dynamically using the API -->
-    ISP
+    <div class="address">
+      <div class="address__search">
+        <h1 class="heading heading--primary">
+          IP Address Tracker
+        </h1>
+        <form action="#" class="form" id="address-form" name="address-form">
+          <div class="control-group">
+            <input type="search" class="control form__control" placeholder="Search for any IP address or domain" id="address-search"
+              name="address-search" />
+            <button class="button form__submit">
+              <img src="./images/icon-arrow.svg" alt="" />
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="address__information">
+        <div class="address__detail">
+          <label for="" class="address__label">IP Address</label>
+          <span class="address__data">
+            127.0.0.1
+          </span>
+        </div>
+        <div class="address__detail">
+          <label for="" class="address__label">Location</label>
+          <span class="address__data">
+            Barranquilla
+          </span>
+        </div>
+        <div class="address__detail">
+          <label for="" class="address__label">Timezone</label>
+          <span class="address__data">
+            UTC-05:00
+          </span>
+        </div>
+        <div class="address__detail">
+          <label for="" class="address__label">ISP</label>
+          <span class="address__data">
+            Digital Ocean
+          </span>
+        </div>
+      </div>
+      <div class="address__geolocation" id="address-geolocation"></div>
+    </div>
   </div>
 </body>
 

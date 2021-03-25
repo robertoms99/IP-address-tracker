@@ -18,13 +18,8 @@ html {
 :root {
 	--color-light-grey: hsl(230, 100%, 99%);
 	--color-grey: hsl(224, 65%, 95%);
-	--color-dark-grey: hsl(223, 50%, 87%);
-	--color-black: hsl(225, 20%, 60%);
-	--color-primary: hsl(227, 35%, 25%);
-	--color-accent: hsl(174, 77%, 80%);
-	--color-dark-accent: hsl(174, 86%, 45%);
-	--color-light-danger: hsl(14, 92%, 95%);
-	--color-danger: hsl(15, 100%, 70%);
+	--color-dark-grey: hsl(0, 0%, 59%);
+	--color-black: hsl(0, 0%, 17%);
 }
 
 html,
@@ -38,7 +33,7 @@ body {
 	box-sizing: border-box; //1
 	color: var(--color-black);
 	display: flow-root; //2
-	font-family: 'Manrope', sans-serif;
+	font-family: 'Rubik', sans-serif;
 	font-size: 1.5rem;
 }
 

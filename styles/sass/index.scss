@@ -2,5 +2,7 @@
 @use './abstracts/typography';
 @use './abstracts/base';
 @use './pages/home';
+@use './components/form';
+@use './components/address';
 @use './components/button';
 @use './components/media';
