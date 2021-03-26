@@ -1,18 +1,84 @@
 .address {
 	height: 100vh;
+	display: flex;
+	flex-direction: column;
 	&__search {
 		background: url('/images/pattern-bg.png');
-		height: 25rem;
+		height: 20rem;
 		padding: 0.1px 0;
+		grid-area: 1 / 1;
+	}
+	&__button {
+		padding: 0 1em;
+	}
+	&__control {
+		flex: 1;
+		padding: 1em;
+		border: 1px solid transparent;
+		&:focus {
+			border: 1px solid var(--color-dark-grey);
+		}
+	}
+
+	&__control-group,
+	&__information {
+		width: 85%;
+		z-index: 99999999999999;
+	}
+	&__form {
+		position: relative;
+	}
+	&__control-group {
+		margin: auto;
+		@media screen and (min-width: 40em) {
+			max-width: 40%;
+		}
+	}
+	&__geolocation {
+		flex: 1;
 	}
 	&__information {
 		padding: 1.25em;
 		border-radius: 7px;
 		background-color: white;
-		transform: translateY(-50%);
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		flex-direction: column;
+		position: absolute;
+		top: calc(100% + 2em);
+		left: 50%;
+		transform: translateX(-50%);
+		box-shadow: 0 0.75rem 5rem -1rem var(--color-dark-grey);
+		@media screen and (min-width: 40em) {
+			flex-direction: row;
+			align-items: stretch;
+		}
+	}
+	&__label {
+		font-size: 70%;
+		text-transform: uppercase;
+		margin-bottom: 0.35em;
+	}
+	&__detail {
+		margin-bottom: 1.25em;
+		text-align: center;
+		@media screen and (min-width: 40em) {
+			margin-bottom: 0;
+			text-align: left;
+			padding: 1.25em;
+			flex: 1;
+			&:not(:last-child) {
+				box-shadow: 2px 0 0 -1px var(--color-dark-grey);
+			}
+		}
+	}
+	&__label,
+	&__data {
+		display: block;
+	}
+	&__data {
+		font-size: 1.25em;
+		font-weight: bold;
 	}
 }

@@ -1,0 +1,11 @@
+.control {
+	outline: none;
+	border: none;
+	&-group {
+		display: flex;
+		overflow: hidden;
+		&--round {
+			border-radius: 0.7rem;
+		}
+	}
+}

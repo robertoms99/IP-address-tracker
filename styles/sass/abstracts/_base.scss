@@ -13,6 +13,9 @@
 //1-base for rem factor
 html {
 	font-size: 62.5%; //1
+	@media screen and (min-width: 40em) {
+		font-size: 65%; //1
+	}
 }
 
 :root {
